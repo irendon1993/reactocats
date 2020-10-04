@@ -1,86 +1,8 @@
 import React, { Component } from 'react'
+import { PageFooter } from './components/PageFooter'
+import { PageHeader } from './components/PageHeader'
+import { OctoCat } from './components/OctoCat'
 
-class PageHeader extends Component {
-  render() {
-    return (
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">
-                <img
-                  src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                  alt="GithubLogo"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">Octodex</a>
-            </li>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="https://octodex.github.com/faq/">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-        ​
-        <nav>
-          <ul>
-            <li>
-              <a href="https://twitter.com/githubdesign">
-                Follow us on Twitter
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/">Back to GitHub.com</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    )
-  }
-}
-
-class PageFooter extends Component {
-  render() {
-    return (
-      <footer>
-        <div>
-          <p>© 2013 – 2020 GitHub, Inc. All rights reserved.</p>
-        </div>
-      </footer>
-    )
-  }
-}
-
-class OctoCat extends Component {
-  render() {
-    return (
-      <article>
-        <figure>
-          <a href={this.props.aHRef1}>
-            <img src={this.props.catImg} width="400" height="400" />
-          </a>
-        </figure>
-        <ul>
-          <li>
-            <p>{this.props.catNumber}</p>
-            <a href={this.props.aHRef2}>
-              <strong>{this.props.catName} </strong>
-            </a>
-          </li>
-          <li>
-            <a href={this.props.aHRef3}>
-              <img src={this.props.userIcon} width="24" height="24" />
-            </a>
-          </li>
-        </ul>
-      </article>
-    )
-  }
-}
 class App extends Component {
   render() {
     return (
@@ -105,7 +27,6 @@ class App extends Component {
             aHRef3="https://github.com/cameronfoxly"
             userIcon="https://github.com/cameronfoxly.png"
           />
-          ​
           <OctoCat
             aHRef1="https://octodex.github.com//sentrytocat/"
             catImg="https://octodex.github.com//images/Sentrytocat_octodex.jpg"
@@ -115,7 +36,6 @@ class App extends Component {
             aHRef3="https://github.com/cameronmcefee"
             userIcon="https://github.com/cameronmcefee.png"
           />
-          ​
           <OctoCat
             aHRef1="https://octodex.github.com//boxerocat/"
             catImg="https://octodex.github.com//images/boxertocat_octodex.jpg"
@@ -152,14 +72,6 @@ class App extends Component {
             aHRef3="https://github.com/kimestoesta"
             userIcon="https://github.com/kimestoesta.png"
           />
-          ​ ​
-          {/* <a href="https://github.com/heyhayhay">
-                  <img
-                    src="https://github.com/heyhayhay.png"
-                    width="24"
-                    height="24"
-                    alt="heyhayhay"
-                  /> */}
           <OctoCat
             aHRef1="https://octodex.github.com//spidertocat/"
             catImg="https://octodex.github.com//images/spidertocat.png"
@@ -169,7 +81,6 @@ class App extends Component {
             aHRef3="https://github.com/jeejkang"
             userIcon="https://github.com/jeejkang.png"
           />
-          ​
         </main>
         <PageFooter />
       </>
